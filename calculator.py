@@ -1,13 +1,14 @@
 import math
 from logger import log_action
 
-## feature has 2 which are {first feature = {feature}/01/add-subtract, second feature = {feature}/02/multiply-divide}
+## feature has 3 which are:
+## {M2: feature/01/add-subtract, M3: feature/02/multiply-divide, M4: feature/03/advanced-math}
 
 
 # ===========================================
 
 
-# FEATURE 1
+# FEATURE 1 (M2)
 
 def add(a, b):
     # result = a + b
@@ -25,7 +26,7 @@ def subtract(a, b):
 # ===========================================
 
 
-#  FEATURE 2
+# FEATURE 2 (M3)
 
 def multiply(a, b):
     # result = a * b
@@ -38,6 +39,26 @@ def divide(a, b):
     #     raise ValueError ("Cannot divide by Zero")
     # result = a/b
     # log_action("divide", result)
+    # return result
+    pass
+
+
+# ===========================================
+
+
+# FEATURE 3 (M4)
+
+def power(a, b):
+    # result = math.pow(a, b)
+    # log_action("power", result)
+    # return result
+    pass
+
+def sqrt(a):
+    # if a < 0:
+    #     raise ValueError("Cannot square root negative number")
+    # result = math.sqrt(a)
+    # log_action("sqrt", result)
     # return result
     pass
 

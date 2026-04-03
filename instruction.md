@@ -13,14 +13,13 @@ and hotfix parent is main
 
 and you are now read each line
 
-we have 2 feature
+we have 6 team members working in pairs:
 
-first feature = {feature}/01/add-subtract
+1. Issue #01 (Feature): M1 (Leader) & M2
+2. Issue #02 (Feature): M2 & M3
+3. Issue #03 (Feature): M3 & M4
+4. Issue #04 (Bugfix): M4 & M5
+5. Issue #05 (Hotfix): M5 & M6
+6. Issue #06 (Release): M6 & M1 (Leader)
 
-second feature = {feature}/02/multiply-divide
-
-and 1 bugfix
-
-and 1 hotfix
-
-now you are to generate and anaylyst track.md file for all command track feature
+now you are to generate and anaylyst track.md file for all command track feature/bugfix/hotfix/release

@@ -1,20 +1,28 @@
 # scenario03 — Python Git-Flow Calculator
 
 A hands-on Git-Flow training project built with a Python CLI calculator.  
-This project follows the **Git-Flow branching strategy** and is used to practice collaborative development workflows.
+This project follows the **Git-Flow branching strategy** and is used to practice collaborative development workflows for a 6-person team working in pairs.
+
+---
+
+## 👥 Team Pairs & Collaboration
+
+| Issue | Type | Name | Assignees |
+| :--- | :--- | :--- | :--- |
+| **#01** | feature | Basic Arithmetic | **M1 & M2** |
+| **#02** | feature | Core Operations | **M2 & M3** |
+| **#03** | feature | Advanced Math | **M3 & M4** |
+| **#04** | bugfix | Error Handling | **M4 & M5** |
+| **#05** | hotfix | UI Menu Fix | **M5 & M6** |
+| **#06** | release | Release v1.0.0 | **M6 & M1** |
+
+> **Note:** Every member is assigned to two issues, collaborating with two different partners to maximize Git-Flow synchronization practice.
 
 ---
 
 ## 📋 Project Scope
 
-This project contains:
-
-| Branch Type | Count | Purpose |
-|-------------|-------|---------|
-| `feature`   | 2     | Implement calculator operations |
-| `bugfix`    | 1     | Fix error handling in the CLI |
-| `hotfix`    | 1     | Restore missing menu option in production |
-| `release`   | 1     | Prepare and tag a stable release |
+Detailed task descriptions can be found in [issues.md](file:///Users/anbschool0018/Desktop/Project/031.git/scenario03/issues.md).
 
 ---
 
@@ -22,21 +30,13 @@ This project contains:
 
 Every branch name **must include the assigned issue ID** as a prefix, followed by a descriptive slug.
 
-### Format
-
-```
-<type>/<issue-id>/<short-description>
-```
-
 ### Examples
 
-| Issue ID | Feature Name    | Branch Name                          | Command |
-|----------|-----------------|--------------------------------------|---------|
-| `#45`    | add-subtract    | `feature/45/add-subtract`            | `git flow feature start 45/add-subtract` |
-| `#12`    | multiply-divide | `feature/12/multiply-divide`         | `git flow feature start 12/multiply-divide` |
-| `#3`     | fix-error       | `bugfix/3/fix-error-handling`        | `git flow bugfix start 3/fix-error-handling` |
-
-> **Rule:** The `{name}` in `git flow <type> start {name}` must always follow the pattern `{issue-id}/{description}`.
+| Issue ID | Type | Name | Branch Name | Command |
+|----------|------|------|-------------|---------|
+| `#01` | feature | add-subtract | `feature/01/add-subtract` | `git flow feature start 01/add-subtract` |
+| `#04` | bugfix | error-handling | `bugfix/01/error-handling` | `git flow bugfix start 01/error-handling` |
+| `#05` | hotfix | menu-fix | `hotfix/01/menu-fix` | `git flow hotfix start 01/menu-fix` |
 
 ---
 
@@ -51,37 +51,28 @@ Follow this order when working through the project:
 4. Hotfix       ──► main + develop  (production fix)
 ```
 
-### Step-by-Step
+### Collaboration Workflow
+
+1.  **Start & Publish**: One member starts the branch and publishes it.
+2.  **Track**: The partner uses `track` to sync the branch.
+3.  **Collaborate**: Both members push and pull changes to the shared branch.
+4.  **Finish**: The team lead or assigned reviewer approves the merge.
 
 ```bash
-# 1. Start and publish your branch
+# 1. Partner A: Start and publish
 git flow feature start <issue-id>/<name>
 git flow feature publish <issue-id>/<name>
 
-# 2. Team members track your branch
+# 2. Partner B: Track the branch
 git flow feature track <issue-id>/<name>
 
-# 3. Finish and merge back
+# 3. Both: Pull/Push regularly
+git pull
+git push
+
+# 4. Finish and merge back
 git flow feature finish <issue-id>/<name>
-
-# 4. After features and bugfix are done — cut a release
-git flow release start <version>
-git flow release finish <version>
-
-# 5. Fix any production issue as a hotfix (from main)
-git flow hotfix start <issue-id>/<name>
-git flow hotfix finish <issue-id>/<name>
 ```
-
----
-
-## 🤝 Team Guidelines
-
-- **Always publish** your branch after starting it so teammates can track your progress.
-- **Always communicate** before making changes that may affect shared branches.
-- **Use `track`** to follow a remotely published branch created by another team member.
-- **Open a Pull Request** when your branch is ready for review — do not merge directly without team leader approval.
-- **Never force push** to `develop` or `main`.
 
 ---
 
@@ -90,12 +81,13 @@ git flow hotfix finish <issue-id>/<name>
 ```
 scenario03/
 ├── main.py          # CLI entry point
-├── calculator.py    # Core operations: add, subtract, multiply, divide
-├── logger.py        # Action logger (writes to calc_history.log)
-├── pyproject.toml   # Project metadata and dependencies
+├── calculator.py    # Core operations
+├── logger.py        # Action logger
+├── issues.md        # Detailed task descriptions [NEW]
 ├── track.md         # Git-Flow track command reference
 └── README.md        # This file
 ```
+
 
 ---
 
