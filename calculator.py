@@ -29,10 +29,10 @@ def subtract(a, b):
 # FEATURE 2 (M3)
 
 def multiply(a, b):
-    # result = a * b
-    # log_action("multiply", result)
-    # return result
-    pass
+    result = a * b
+    log_action("multiply", result)
+    return result
+    # pass
 
 def divide(a, b):
     if (b==0):
