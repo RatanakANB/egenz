@@ -28,7 +28,7 @@ def main():
             elif choice == '4':  a,b = _ab(); print(calculator.divide(a,b))
             # elif choice == '5':  a,b = _ab(); print(calculator.power(a,b)) # feature 3
             # elif choice == '6':  a = float(input("Enter number: ")); print(calculator.sqrt(a)) # feature 3
-            # else: print('Invalid option') # bugfix 1 (M5)
+            else: print('Invalid option') # bugfix 1 (M5)
         except Exception as e:
             # print(f'Error: {e}') # bugfix 2 (M5)
             # log_error(e) # bugfix 3 (M5)
